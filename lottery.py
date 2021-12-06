@@ -34,3 +34,9 @@ def ask():
             break
     List = [FirstNum, SecondNum, ThridNum]
     return List
+
+# generating three random winning numbers
+def get3WinningNum():
+    W_Num1, W_num2, W_Num3 = random.sample(range(0, 9), 4)
+    Winning_list = [W_Num1, W_num2, W_Num3]
+    return Winning_list
