@@ -7,7 +7,7 @@
 # if “n” the program will exit.
 
 # Greetings
-print("Hello! This Program will ask you a three winning number from (0-9)")
+print("\033[1m\033[97mHello! This Program will ask you a three winning number from (0-9)\033[0m")
 
 import random
 
@@ -15,15 +15,15 @@ import random
 def ask():
     while True:
         try: 
-            FirstNum = int(input("Enter first number (0-9): "))
+            FirstNum = int(input("\033[1m\033[93mEnter first number (0-9): "))
             if FirstNum not in range(0,9):
                 print("Invalid. Input is out of range (0-9)") 
                 continue
-            SecondNum = int(input("Enter second number (0-9): "))
+            SecondNum = int(input("\033[1m\033[93mEnter second number (0-9): "))
             if SecondNum not in range(0,9):
                 print("Invalid. Input is out of range (0-9)") 
                 continue
-            ThridNum = int(input("Enter third number (0-9): "))
+            ThridNum = int(input("\033[1m\033[93mEnter third number (0-9): "))
             if ThridNum not in range(0,9):
                 print("Invalid. Input is out of range (0-9)") 
                 continue
@@ -37,7 +37,7 @@ def ask():
 
 # generating three random winning numbers
 def get3WinningNum():
-    W_Num1, W_num2, W_Num3 = random.sample(range(0, 9), 4)
+    W_Num1, W_num2, W_Num3 = random.sample(range(0, 9), 3)
     Winning_list = [W_Num1, W_num2, W_Num3]
     return Winning_list
 
@@ -50,7 +50,7 @@ def checkWinLose(list1, list2):
         
 # start the game
 def play():
-    print("Welcome to the Lottery!")
+    print("\033[1m\033[94mWelcome to the Lottery!\033[0m")
     # asks user 3 numbers and generates 3 winning numbers
     inputNums = ask()
     winningNums = get3WinningNum()
@@ -69,7 +69,7 @@ def playAgain():
             print("n")
             play()
         elif yn == 'n':
-            print("Bye player!")
+            print("Bye Thank you for playing!")
             break
         else:
             print("n")
