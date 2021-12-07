@@ -7,3 +7,18 @@
 
 # greetings to the user
 print ("This program will generate a random number from 0 to 100.")
+
+# code to generate random number from 0-100
+from random import randrange
+randomNum = randrange(0, 100)
+
+Guess = int(input("Please Enter your guess here: "))
+
+# code block that will ask user repeatedly until the random number guess correctly
+while randomNum != Guess:
+    if Guess > randomNum:
+        Guess = int(input("Your guess is greater than the number. Try decreasing your input number. Please Enter your guess here: "))
+        if Guess == randomNum:
+            break
+    
+        
